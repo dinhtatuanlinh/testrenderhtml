@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:1000/css/normalize.css">
+    <link rel="stylesheet" href="http://localhost:1000/css/style.css?ver=1.0">
+    <link rel="stylesheet" href="http://localhost:1000/css/mobile.css?ver=1.0" media="only screen and (max-width: 799px)">
+    <link rel="stylesheet" href="http://localhost:1000/css/tablet.css?ver=1.0" media="only screen and (min-width: 800px) and (max-width: 1230px)">
+    <link rel="stylesheet" href="http://localhost:1000/css/desktop.css?ver=1.0" media="only screen and (min-width: 1231px)">
+    <title>Quản trị đăng ký khám</title>
+</head>
+
+<body>
+    <div id="loginpage">
+        <div class="wrapper">
+            <div class="logo"><img src="http://localhost:1000/imgs/logo-benhvien.png" alt="Tai mũi họng Sài gòn"></div>
+            <form action="" role="form" method="post" enctype="multipart/form-data">
+                <div class="user"><span>Tài khoản:</span><input type="text" name="username"></div>
+                <div class="pass"><span>Mật khẩu:</span><input id="type" type="password" onkeyup="getpassword()"></div>
+                <input type="text" id="md5" name="password" value="" class="hide-small hide-medium hide-large">
+                <div class="submit"><button type="submit">Đăng nhập</button></div>
+                <div>Liên hệ quản trị viên để đăng ký tài khoản</div>
+            </form>
+        </div>
+
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/md5.js"></script>
+    <script>
+        var form = document.getElementsByTagName("form")[0];
+        form.setAttribute("action", `${lh}login`);
+        var type = document.getElementById('type');
+        var md5 = document.getElementById('md5');
+        md5.value = '';
+
+        function getpassword() {
+            var encrypt = MD5(type.value);
+            md5.value = encrypt;
+        }
+    </script>
+</body>
+
+</html>

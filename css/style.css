@@ -1,0 +1,205 @@
+.invisible {
+    visibility: hidden;
+}
+
+#header {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-around;
+}
+
+#header #logo {
+    display: flex;
+    justify-content: center;
+}
+
+#header #title {
+    color: #2c4ca1;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#header #logo img {
+    height: 100%;
+}
+
+.wrapper {
+    border-bottom: 1px solid #2c4ca1;
+}
+
+#info {
+    border-top: 1px solid #2c4ca1;
+}
+
+#info .box {
+    height: 30px;
+    overflow: hidden;
+}
+
+#info .box div {
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    padding: 0 20px;
+}
+
+#search {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    align-items: flex-end;
+}
+
+button {
+    margin: 3px 0;
+    background-color: #2c4ca1;
+    color: #fff;
+    border: none;
+}
+
+.button {
+    margin: 3px 0;
+    padding: 5px 8px;
+    background-color: #2c4ca1;
+    color: #fff;
+    cursor: pointer;
+    height: 25px;
+    text-decoration: none;
+    line-height: 25px;
+}
+
+#search>button {
+    display: block;
+}
+
+#search form {
+    display: block;
+}
+
+#search form input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #2c4ca1;
+}
+
+.row:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.row .index {
+    width: 30px;
+    text-align: center;
+}
+
+.row .box {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row .box .col form button {
+    display: block;
+}
+
+.row .box .col form a {
+    display: block;
+}
+
+.row .box .col img {
+    width: 100px;
+}
+
+.row .box .col span {
+    font-weight: bold;
+}
+
+.row .box .col .minibox p {
+    margin: 5px 0;
+}
+
+
+/* login */
+
+#loginpage {
+    background: url(../imgs/login-background.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#loginpage .wrapper {
+    width: 480px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+#loginpage .wrapper:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+}
+
+#loginpage .wrapper .logo {
+    width: 480px;
+    display: flex;
+    justify-content: center;
+}
+
+#loginpage .wrapper .logo img {
+    width: 50%;
+    margin: 30px 0;
+}
+
+#loginpage .wrapper form {
+    margin: 30px 0;
+    color: #333;
+}
+
+#loginpage .wrapper form div {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+#loginpage .wrapper form span {
+    display: block;
+    width: 70px;
+}
+
+#loginpage .wrapper form button {
+    padding: 3px 10px;
+    background-color: rgba(44, 75, 160, 0.8);
+}
+
+#loginpage .wrapper form input {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #333;
+}
+
+
+/* end login */
